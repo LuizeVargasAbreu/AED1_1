@@ -4,7 +4,7 @@
 struct agenda{
     char nome[100];
     int telefone;
-    char cidade[100];
+    //char cidade[100];
     struct agenda *prox;
 };
 
@@ -74,8 +74,8 @@ void inserirCadastro(end *inicio){
         scanf("%s", nova->nome);
         printf("\tTelefone: ");
         scanf("%d", &nova->telefone);
-        printf("\tCidade: ");
-        scanf("%s", nova->cidade);
+      //  printf("\tCidade: ");
+      //  scanf("%s", nova->cidade);
         printf("\n");
     nova->prox = inicio->prox;
 	inicio->prox = nova;
@@ -88,7 +88,7 @@ void listarCadastro(end *inicio){
     for(listar = inicio->prox; listar != NULL; listar = listar->prox){
         printf("\n\tNome: %s\n", listar->nome);
         printf("\tTelefone: %d\n", listar->telefone);
-        printf("\tCidade: %s\n", listar->cidade);
+        //printf("\tCidade: %s\n", listar->cidade);
 
     }
 }
@@ -104,7 +104,7 @@ void pesquisarCadastro(end *inicio){
         if (strcmp(pesquisar->nome, nm) == 0){
             printf("\tNome: %s\n", pesquisar->nome);
             printf("\tTelefone: %d\n", pesquisar->telefone);
-            printf("\tCidade: %s\n", pesquisar->cidade);
+          //  printf("\tCidade: %s\n", pesquisar->cidade);
         }
     }
 }
